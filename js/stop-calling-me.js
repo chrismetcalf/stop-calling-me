@@ -13,8 +13,8 @@ $(function() {
       url: "https://opendata.fcc.gov/resource/sr6c-syda.json",
       type: "GET",
       data: {
-        "issue" : "Telemarketing (including do not call and spoofing)",
         "caller_id_number" : number,
+        "$where" : "issue IN ('Telemarketing (including do not call and spoofing)', 'Robocalls', 'Junk Faxes')",
         "$select" : "caller_id_number, COUNT(*) AS count, MAX(issue_date) AS last_reported",
         "$group" : "caller_id_number",
         "$$app_token": "VNyBRMoJAPyaGMUC42IY2M1UA"
