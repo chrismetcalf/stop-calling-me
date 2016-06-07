@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Stop Calling Me!</title>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+      .info-window {
+        max-width: 200px;
+      }
+
+      #search {
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="glyphicon glyphicon-phone-alt"></i> Stop Calling Me!</h1>
+
+      <p>Got a call from a strange number that may be a telemarketer? Look them up in the <a href="https://dev.socrata.com/foundry/opendata.fcc.gov/sr6c-syda">FCC Consumer Complaints Database</a> to see if you should answer the call or report them!</p>
+
+      <form id="search" class="form-inline" method="POST">
+        <div class="form-group">
+          <input name="q" type="text" class="query form-control" placeholder="Enter their phone #..." />
+          <button type="submit" class="btn btn-primary">Search!</button>
+        </div>
+      </form>
+
+      <ul id="results"></ul>
+
+      <p><a href="https://consumercomplaints.fcc.gov/hc/en-us/requests/new?ticket_form_id=39744">Lodge a complaint about this number &raquo;</a></p>
+
+      <p>Source code at <a href="https://github.com/chrismetcalf/stop-calling-me">https://github.com/chrismetcalf/stop-calling-me</a>.</p>
+    </div>
+
+    <script src="./js/stop-calling-me.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
